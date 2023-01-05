@@ -81,5 +81,5 @@ contract Transactions {
         return userTransactions;
     }
 
-    // todo : mintNft
+    // todo : mintNft, getTopCreators, getTopNfts, getNftByCreator, sellOwnedNft, buyNft
 }

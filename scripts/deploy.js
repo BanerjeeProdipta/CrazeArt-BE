@@ -3,7 +3,14 @@ const main = async () => {
   const transactions = await Transactions.deploy();
 
   await transactions.deployed();
-  console.log("Transactions deployed to:", transactions.address);
+  console.log("transactions deployed to:", transactions.address);
+
+  const MyNFT = await hre.ethers.getContractFactory("MyNFT");
+  const myNft = await MyNFT.deploy();
+
+  await myNft.deployed();
+
+  console.log("MyNft deployed to:", myNft.address);
 };
 
 const runMain = async () => {
@@ -17,3 +24,4 @@ const runMain = async () => {
 };
 
 runMain();
+
